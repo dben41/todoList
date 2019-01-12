@@ -1,5 +1,5 @@
 # Demo
-[[http://darylbennett.net/assets/tododemo.gif]]
+!(demo of using code)[http://darylbennett.net/assets/img/tododemo.gif]
 
 # TodoNg
 
