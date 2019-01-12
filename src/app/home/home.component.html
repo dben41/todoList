@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-toolbar>
+      <mat-card-title>Todo List</mat-card-title>
+      <button (click)="removeItem()" color="warn" mat-raised-button class="right">Remove</button>
+    </mat-toolbar>
+
+    <mat-selection-list (selectionChange)="onSelectionChanged($event)">
+      <mat-list-option checkboxPosition="before" *ngFor="let todoItem of activeList">
+                      <span
+                        [style.textDecoration]="selectedItems.includes(todoItem.text) ? 'line-through' : ''">{{todoItem.text}}</span>
+      </mat-list-option>
+    </mat-selection-list>
+
+    <!--Put the add item here-->
+    <mat-form-field>
+      <input type="text" matInput [(ngModel)]='newItem' placeholder="Add Item">
+    </mat-form-field>
+    <button color="primary" mat-raised-button class="little-right" (click)="addItem()">Add</button>
+</mat-card>
